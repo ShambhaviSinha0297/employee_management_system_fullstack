@@ -1,0 +1,42 @@
+package com.fullstack.employee.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.fullstack.employee.entity.Employee;
+import com.fullstack.employee.repository.EmployeeRepository;
+
+@Service
+public class EmployeeServiceImpl implements EmployeeService {
+	
+	@Autowired
+	private EmployeeRepository employeeRepo;
+
+	public EmployeeServiceImpl(EmployeeRepository employeeRepo) {
+		this.employeeRepo = employeeRepo;
+	}
+
+	@Override
+	public Employee createEmployee(Employee employee) {
+		employeeRepo.save(employee);
+		return employee;
+	}
+
+	@Override
+	public boolean deleteEmployee(Long id) {
+		employeeRepo.deleteById(id);
+	}
+
+	@Override
+	public Employee getEmployeeById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Employee updateEmployee(Employee employee) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

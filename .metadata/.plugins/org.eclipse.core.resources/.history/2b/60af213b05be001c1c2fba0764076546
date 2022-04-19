@@ -1,0 +1,12 @@
+package com.fullstack.employee.controller;
+
+public class EmployeeController {
+
+	@Autowired
+	private final EmployeeService employeeService;
+
+    public EmployeeController(EmployeeService employeeService) {
+        this.employeeService = employeeService;
+    }
+
+}

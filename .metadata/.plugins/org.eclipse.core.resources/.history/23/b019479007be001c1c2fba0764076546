@@ -1,0 +1,18 @@
+package com.fullstack.employee.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.fullstack.employee.service.EmployeeService;
+
+public class EmployeeController {
+
+	@Autowired
+	private final EmployeeService employeeService;
+
+    public EmployeeController(EmployeeService employeeService) {
+        this.employeeService = employeeService;
+    }
+    
+    
+
+}

@@ -1,0 +1,6 @@
+package com.fullstack.employee.entity;
+
+@Entity
+public class Employee {
+
+}

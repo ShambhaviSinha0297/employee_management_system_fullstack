@@ -1,0 +1,13 @@
+package com.fullstack.employee.entity;
+
+import javax.persistence.*;
+import lombok.*;
+
+@Entity
+@Table(name = "tbl_employees")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Employee {
+
+}
